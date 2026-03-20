@@ -1,0 +1,145 @@
+{
+  "appgroup_id": "6822e98027ba3d5c8d1ba6df",
+  "appgroup_name": "Bilderverwaltung",
+  "apps": {
+    "bilder": {
+      "app_id": "6822e973c07d98c861cb2db6",
+      "name": "Bilder",
+      "controls": {
+        "bild_datei": {
+          "identifier": "bild_datei",
+          "label": "Bilddatei",
+          "type": "file",
+          "subtype": null,
+          "fulltype": "file",
+          "description": "An uploaded file (or `null`/`None`).\n\nThe field value will be the URL to download the file in the form `https://my.living-apps.de/files/6822e973c07d98c861cb2db6/data/<record-id>/<control-identifier>/<internal-id>` (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": null,
+          "in_expert_search": true
+        },
+        "bild_titel": {
+          "identifier": "bild_titel",
+          "label": "Titel des Bildes",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": null,
+          "in_expert_search": true
+        },
+        "bild_beschreibung": {
+          "identifier": "bild_beschreibung",
+          "label": "Beschreibung",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea",
+          "description": "A string value that can contain multiple lines of text (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": null,
+          "in_expert_search": true
+        },
+        "bild_aufnahmedatum": {
+          "identifier": "bild_aufnahmedatum",
+          "label": "Aufnahmedatum und -zeit",
+          "type": "date",
+          "subtype": "datetimeminute",
+          "fulltype": "date/datetimeminute",
+          "description": "A specific moment in time consisting of year, month, day, hour and minute (or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>T<HH>:<MM>` (or `null`/`None`).\n\nFor example: `2000-02-29T11:30`.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": null,
+          "in_expert_search": true
+        },
+        "bild_standort": {
+          "identifier": "bild_standort",
+          "label": "Aufnahmeort",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "description": "A reference to a LivingApp record from the target lookup app 'Standorte' with the id `6822e9709bf15c1e2a8dca33` (or `null`/`None`).\n\nThe field value will be a valid record URL in the form `https://my.living-apps.de/rest/apps/6822e9709bf15c1e2a8dca33/<record-id>` (or `null`/`None`).\n\nDisplayed as single-select field in HTML pages.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": null,
+          "in_expert_search": true,
+          "lookup_app": "https://my.living-apps.de/rest/apps/6822e9709bf15c1e2a8dca33"
+        }
+      }
+    },
+    "standorte": {
+      "app_id": "6822e9709bf15c1e2a8dca33",
+      "name": "Standorte",
+      "controls": {
+        "standort_name": {
+          "identifier": "standort_name",
+          "label": "Name des Standorts",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": null,
+          "in_expert_search": true
+        },
+        "standort_beschreibung": {
+          "identifier": "standort_beschreibung",
+          "label": "Beschreibung",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea",
+          "description": "A string value that can contain multiple lines of text (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": null,
+          "in_expert_search": true
+        },
+        "standort_position": {
+          "identifier": "standort_position",
+          "label": "Geografische Position",
+          "type": "geo",
+          "subtype": null,
+          "fulltype": "geo",
+          "description": "A geographical location consisting of latitude, longitude and additional information (or `null`/`None`).\n\nThe field value will be an object with the keys `lat` (latitude as decimal degrees),\n`long` (longitude as decimal degrees) and `info` (additional information as a string).\n\nFor example: `{\"lat\": 51.313056, \"long\": -0.601944, \"info\": \"Woking, Woking Borough, Surrey, England\"}`.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": null,
+          "in_expert_search": true
+        }
+      }
+    }
+  },
+  "metadata": {
+    "apps_list": [
+      "Bilder",
+      "Standorte"
+    ]
+  }
+}
